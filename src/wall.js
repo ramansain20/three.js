@@ -1,8 +1,21 @@
 import * as THREE from 'three'
-const baseTexture = new THREE.TextureLoader().load('./walls/baseColor.jpg' ); 
+const wallBaseTexture = new THREE.TextureLoader().load('./walls/baseColor.jpg' ); 
+const reversebaseColor = new THREE.TextureLoader().load('./walls/reversebaseColor.jpg' );
+
+wallBaseTexture.minFilter = THREE.NearestFilter
+wallBaseTexture.magFilter = THREE.NearestFilter;
+wallBaseTexture.wrapS = THREE.RepeatWrapping;
 const walls=new THREE.Group();
 export default function createAllWall(coordinates){// coordinates is an array of arrays of coordinates
-    
+const materials = [new THREE.MeshStandardMaterial(),
+    new THREE.MeshStandardMaterial({map:wallBaseTexture}),
+    new THREE.MeshStandardMaterial({map:reversebaseColor}), 
+    new THREE.MeshStandardMaterial({map:wallBaseTexture}), 
+    new THREE.MeshStandardMaterial({map:wallBaseTexture}), 
+    new THREE.MeshStandardMaterial({map:wallBaseTexture})
+];
+
+
 coordinates.forEach((coordinate)=>{
     
     const x1=coordinate.x1*10;
@@ -14,9 +27,7 @@ coordinates.forEach((coordinate)=>{
     
     const geometry = new THREE.BoxGeometry(length,0.2, 40);
     geometry.center();
-    const material = new THREE.MeshBasicMaterial({ color: 0x808080, map: baseTexture});
-    const wall = new THREE.Mesh(geometry, material);
-    wall.geometry.setAttribute('uv2', new THREE.BufferAttribute(geometry.attributes.uv.array, 2));
+    const wall = new THREE.Mesh(geometry, materials);
     wall.position.z=0;
     wall.position.x=(x1+x2)/2;
     wall.position.y=(y1+y2)/2;

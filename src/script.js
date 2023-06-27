@@ -12,7 +12,7 @@ const renderer = new THREE.WebGLRenderer({
     canvas: canvas
 })
 const scene = new THREE.Scene()
-const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+const light = new THREE.AmbientLight( 0xffffff ); // soft white light
 scene.add( light );
 const group=new THREE.Group();
 const axesHelper = new THREE.AxesHelper( 50 );
