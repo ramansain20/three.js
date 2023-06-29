@@ -1,12 +1,31 @@
 import './style.css'
 import * as THREE from 'three'
 import createAllWall from './wall.js'
+import createAllDoor from './door.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import createPlane from './plane'
 /**
  * Base
  */
 // Canvas
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
+window.addEventListener('resize', () =>
+{
+    // Update sizes
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    // Update camera
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    // Update renderer
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
 const canvas = document.querySelector('canvas.webgl')
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas
@@ -37,7 +56,16 @@ const planeCoordinates=[
 ]
 const plane =createPlane(planeCoordinates);
 group.add(plane);
-const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 );
+
+const doorsCoordinates=[
+	{x1:1,y1:10,x2:4,y2:10},
+	{x1:1,y1:0,x2:4,y2:0},
+	{x1:0,y1:1,x2:0,y2:4},
+]
+const doors = createAllDoor(doorsCoordinates);
+group.add(doors);
+
+const camera = new THREE.PerspectiveCamera( 45, sizes.width / sizes.height, 0.1, 1000000 );
 camera.position.set( 0, 0, 200 );
 camera.lookAt( group.position.x, group.position.y, 0 );
 const controls = new OrbitControls( camera,canvas);
@@ -49,7 +77,8 @@ controls.mouseButtons = {
 controls.enableDamping = true;
 scene.add( camera );
 
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize(sizes.width, sizes.height)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
 new THREE.Box3().setFromObject( group ).getCenter( group.position ).multiplyScalar( - 1 );
 scene.add(group);
 function animate() {

@@ -2,17 +2,17 @@ import * as THREE from 'three'
 const wallBaseTexture = new THREE.TextureLoader().load('./walls/baseColor.jpg' ); 
 const reversebaseColor = new THREE.TextureLoader().load('./walls/reversebaseColor.jpg' );
 
-wallBaseTexture.minFilter = THREE.NearestFilter
 wallBaseTexture.magFilter = THREE.NearestFilter;
-wallBaseTexture.wrapS = THREE.RepeatWrapping;
+wallBaseTexture.minFilter = THREE.NearestFilter
 const walls=new THREE.Group();
 export default function createAllWall(coordinates){// coordinates is an array of arrays of coordinates
 const materials = [new THREE.MeshStandardMaterial(),
-    new THREE.MeshStandardMaterial({map:wallBaseTexture}),
-    new THREE.MeshStandardMaterial({map:reversebaseColor}), 
-    new THREE.MeshStandardMaterial({map:wallBaseTexture}), 
-    new THREE.MeshStandardMaterial({map:wallBaseTexture}), 
-    new THREE.MeshStandardMaterial({map:wallBaseTexture})
+    new THREE.MeshStandardMaterial({color:0x000000}),
+    new THREE.MeshStandardMaterial({color:0Xffffff ,map:reversebaseColor}), 
+    new THREE.MeshStandardMaterial({color:0Xffffff ,map:wallBaseTexture}), 
+    new THREE.MeshStandardMaterial({color:0x000000}), 
+    new THREE.MeshStandardMaterial({color:0x000000}),
+    new THREE.MeshStandardMaterial({color:0x000000}),
 ];
 
 
@@ -25,7 +25,7 @@ coordinates.forEach((coordinate)=>{
     const length=Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
 
     
-    const geometry = new THREE.BoxGeometry(length,0.2, 40);
+    const geometry = new THREE.BoxGeometry(length,1, 40);
     geometry.center();
     const wall = new THREE.Mesh(geometry, materials);
     wall.position.z=0;
