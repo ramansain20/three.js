@@ -1,0 +1,553 @@
+{
+    "image": {
+      "height": 800,
+      "uri": "https://storage.googleapis.com/hello-data-floorplans/52cd7e3096860711.jpg",
+      "width": 1066
+    },
+    "rooms": [
+      {
+        "dimensions": {
+          "height": 9.17,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 12.71
+        },
+        "functions": [],
+        "polygon": [
+          [
+            690,
+            545
+          ],
+          [
+            1002,
+            545
+          ],
+          [
+            1002,
+            770
+          ],
+          [
+            690,
+            770
+          ],
+          [
+            690,
+            545
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 7.5,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 6.64
+        },
+        "functions": [
+          "DININGROOM"
+        ],
+        "polygon": [
+          [
+            89,
+            356
+          ],
+          [
+            252,
+            356
+          ],
+          [
+            252,
+            540
+          ],
+          [
+            89,
+            540
+          ],
+          [
+            89,
+            356
+          ]
+        ],
+        "texts": [
+          "DINING",
+          "12' 6\" x 10'."
+        ]
+      },
+      {
+        "dimensions": {
+          "height": 2.04,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 2.57
+        },
+        "functions": [
+          "CLOSET"
+        ],
+        "polygon": [
+          [
+            337,
+            423
+          ],
+          [
+            400,
+            423
+          ],
+          [
+            400,
+            473
+          ],
+          [
+            337,
+            473
+          ],
+          [
+            337,
+            423
+          ]
+        ],
+        "texts": [
+          "PANTRY"
+        ]
+      },
+      {
+        "dimensions": {
+          "height": 6.56,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 2.44
+        },
+        "functions": [],
+        "polygon": [
+          [
+            643,
+            606
+          ],
+          [
+            703,
+            606
+          ],
+          [
+            703,
+            767
+          ],
+          [
+            643,
+            767
+          ],
+          [
+            643,
+            606
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 13.36,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 10.35
+        },
+        "functions": [],
+        "polygon": [
+          [
+            710,
+            80
+          ],
+          [
+            964,
+            80
+          ],
+          [
+            964,
+            408
+          ],
+          [
+            710,
+            408
+          ],
+          [
+            710,
+            80
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 8.27,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 2.2
+        },
+        "functions": [],
+        "polygon": [
+          [
+            343,
+            143
+          ],
+          [
+            397,
+            143
+          ],
+          [
+            397,
+            346
+          ],
+          [
+            343,
+            346
+          ],
+          [
+            343,
+            143
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 12,
+          "origin": "OCR",
+          "unit": "IMPERIAL",
+          "width": 13
+        },
+        "functions": [
+          "BEDROOM"
+        ],
+        "polygon": [
+          [
+            83,
+            12
+          ],
+          [
+            369,
+            12
+          ],
+          [
+            369,
+            345
+          ],
+          [
+            83,
+            345
+          ],
+          [
+            83,
+            12
+          ]
+        ],
+        "texts": [
+          "BEDROOM",
+          "13' x 12'",
+          "STOR.",
+          "FURN"
+        ]
+      },
+      {
+        "dimensions": {
+          "height": 2.89,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 2.69
+        },
+        "functions": [
+          "KITCHEN"
+        ],
+        "polygon": [
+          [
+            333,
+            347
+          ],
+          [
+            399,
+            347
+          ],
+          [
+            399,
+            418
+          ],
+          [
+            333,
+            418
+          ],
+          [
+            333,
+            347
+          ]
+        ],
+        "texts": [
+          "REF"
+        ]
+      },
+      {
+        "dimensions": {
+          "height": 4.56,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 7.7
+        },
+        "functions": [],
+        "polygon": [
+          [
+            779,
+            433
+          ],
+          [
+            968,
+            433
+          ],
+          [
+            968,
+            545
+          ],
+          [
+            779,
+            545
+          ],
+          [
+            779,
+            433
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 10,
+          "origin": "OCR",
+          "unit": "IMPERIAL",
+          "width": 14
+        },
+        "functions": [
+          "CLOSET",
+          "BEDROOM"
+        ],
+        "polygon": [
+          [
+            401,
+            203
+          ],
+          [
+            690,
+            203
+          ],
+          [
+            690,
+            563
+          ],
+          [
+            401,
+            563
+          ],
+          [
+            401,
+            203
+          ]
+        ],
+        "texts": [
+          "CLOSET",
+          "BEDROOM",
+          "14' x 10'"
+        ]
+      },
+      {
+        "dimensions": {
+          "height": 2.2,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 7.37
+        },
+        "functions": [],
+        "polygon": [
+          [
+            789,
+            367
+          ],
+          [
+            970,
+            367
+          ],
+          [
+            970,
+            421
+          ],
+          [
+            789,
+            421
+          ],
+          [
+            789,
+            367
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 4.97,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 2.97
+        },
+        "functions": [],
+        "polygon": [
+          [
+            57,
+            648
+          ],
+          [
+            130,
+            648
+          ],
+          [
+            130,
+            770
+          ],
+          [
+            57,
+            770
+          ],
+          [
+            57,
+            648
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 3.22,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 1.71
+        },
+        "functions": [],
+        "polygon": [
+          [
+            356,
+            61
+          ],
+          [
+            398,
+            61
+          ],
+          [
+            398,
+            140
+          ],
+          [
+            356,
+            140
+          ],
+          [
+            356,
+            61
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 5.17,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 12.35
+        },
+        "functions": [
+          "BEDROOM"
+        ],
+        "polygon": [
+          [
+            390,
+            81
+          ],
+          [
+            693,
+            81
+          ],
+          [
+            693,
+            208
+          ],
+          [
+            390,
+            208
+          ],
+          [
+            390,
+            81
+          ]
+        ],
+        "texts": [
+          "BEDROOM",
+          "13' x 12¹"
+        ]
+      },
+      {
+        "dimensions": {
+          "height": 9.58,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 21.64
+        },
+        "functions": [],
+        "polygon": [
+          [
+            52,
+            540
+          ],
+          [
+            583,
+            540
+          ],
+          [
+            583,
+            775
+          ],
+          [
+            52,
+            775
+          ],
+          [
+            52,
+            540
+          ]
+        ],
+        "texts": []
+      },
+      {
+        "dimensions": {
+          "height": 1.92,
+          "origin": "DERIVED",
+          "unit": "IMPERIAL",
+          "width": 1.59
+        },
+        "functions": [],
+        "polygon": [
+          [
+            209,
+            495
+          ],
+          [
+            248,
+            495
+          ],
+          [
+            248,
+            542
+          ],
+          [
+            209,
+            542
+          ],
+          [
+            209,
+            495
+          ]
+        ],
+        "texts": []
+      }
+    ]
+  }

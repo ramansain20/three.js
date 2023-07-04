@@ -4,7 +4,7 @@ const reversebaseColor = new THREE.TextureLoader().load('./walls/reversebaseColo
 
 wallBaseTexture.magFilter = THREE.NearestFilter;
 wallBaseTexture.minFilter = THREE.NearestFilter
-const walls=new THREE.Group();
+var walls = new THREE.Object3D();
 export default function createAllWall(coordinates){// coordinates is an array of arrays of coordinates
 const materials = [new THREE.MeshStandardMaterial(),
     new THREE.MeshStandardMaterial({color:0x000000}),
@@ -25,8 +25,7 @@ coordinates.forEach((coordinate)=>{
     const length=Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
 
     
-    const geometry = new THREE.BoxGeometry(length,1, 40);
-    geometry.center();
+    const geometry = new THREE.BoxGeometry(length,1, 400);
     const wall = new THREE.Mesh(geometry, materials);
     wall.position.z=0;
     wall.position.x=(x1+x2)/2;
@@ -35,6 +34,9 @@ coordinates.forEach((coordinate)=>{
     wall.rotation.z=Math.atan((y2-y1)/(x2-x1));
     walls.add(wall);
 })
-    
+
+
+    var bbox = new THREE.Box3().setFromObject(walls); //get bounding box of object - this will be used to center it
+    walls.position.set(-(bbox.min.x + bbox.max.x) / 2, -(bbox.min.y + bbox.max.y) / 2, 0);
     return walls;
 }
