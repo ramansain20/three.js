@@ -16,7 +16,7 @@ const materials=[
 
 ]
 export default function createPlane() {
-    const geometry = new THREE.BoxGeometry(2000,2000,10);
+    const geometry = new THREE.BoxGeometry(5000,5000,10);
     const plane = new THREE.Mesh(geometry, materials);
     plane.position.z=-200;
     return plane;
