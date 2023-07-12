@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +5,12 @@
     <title>07 - Cameras</title>
 </head>
 <body>
-    <canvas class="webgl"></canvas>
+    <form id="form">
+        <input name="image" type="file" id="imageInput" accept="image/*">
+        <input name="name" type="text" id="nameInput" placeholder="Name">
+        <button type="submit">Upload</button>
+      </form>
+    <canvas style="display: none;" class="webgl"></canvas>
 </body>
 
 </script>
