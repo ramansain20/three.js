@@ -33,7 +33,8 @@ document.getElementById('form').addEventListener('submit', function (event)
 
 const ThreejsBuilder=(data)=>{
     const wallCoordinates=[]
-    data.forEach(element => {
+    
+    data.wallCoordinates.forEach(element => {
         wallCoordinates.push({
             x1:element.x1/10,
             y1:element.y1/10,
@@ -82,7 +83,7 @@ const ThreejsBuilder=(data)=>{
     
     group.add(walls);
     
-    const plane =createPlane();
+    const plane =createPlane(data.dimensions);
     group.add(plane);
     
     const doorsCoordinates=[]

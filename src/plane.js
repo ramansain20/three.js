@@ -15,8 +15,8 @@ const materials=[
     new THREE.MeshStandardMaterial({map:floorBaseTexture}),
 
 ]
-export default function createPlane() {
-    const geometry = new THREE.BoxGeometry(5000,5000,10);
+export default function createPlane(dimensions) {
+    const geometry = new THREE.BoxGeometry(dimensions.height,dimensions.width,10);
     const plane = new THREE.Mesh(geometry, materials);
     plane.position.z=-200;
     return plane;
