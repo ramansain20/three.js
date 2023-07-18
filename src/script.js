@@ -1,4 +1,5 @@
 import './style.css'
+import './output.css'
 import * as THREE from 'three'
 import createAllWall from './wall.js'
 import createAllDoor from './door.js'
@@ -11,10 +12,11 @@ document.getElementById('form').addEventListener('submit', function (event)
         event.preventDefault(); 
         const imageInput = document.getElementById('imageInput');
         const imageFile = imageInput.files[0];
-
+        const username=document.getElementById('username').value;
         const formData = new FormData();
         formData.append('image', imageFile);
         formData.append('name', 'image');
+        formData.append('username', username);
         fetch('http://127.0.0.1:8000/upload/', {
             method: 'POST',
             body: formData

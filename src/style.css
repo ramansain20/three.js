@@ -17,3 +17,6 @@ body
     left: 0;
     outline: none;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
