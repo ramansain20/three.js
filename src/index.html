@@ -5,21 +5,58 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Smart Things</title>
 </head>
-<body class="flex place-content-end ">
-    <image src="../static/homepage/bg.jpg" class="mx-auto absolute top-0 left-0 -z-10 h-[100vh] w-[100vw]"></image>
-    <div id="form" class="flex flex-col justify-center w-4/5 p-4 mx-auto my-auto bg-white rounded-lg h-4/5 bg-opacity-40 md:w-1/4 md:mr-8">
-        <image src="../static/homepage/logo.png" class="mx-auto w-28 mix-blend-multiply "></image>
-        <image src="../static/homepage/logo1.png" class="w-40 mx-auto mix-blend-multiply"></image>
-        <form  class="flex flex-col items-center content-around justify-center h-full space-y-4">
-            <input name="username" type="text" id="username" placeholder="Username" class="w-1/2 p-2 text-black placeholder-black bg-transparent border-b-2 border-black outline-none ">
-            <input name="name" type="text" id="nameInput" placeholder="Name" class="w-1/2 p-2 text-black placeholder-black bg-transparent border-b-2 border-black outline-none">
-            <input name="image" type="file" id="imageInput" accept="image/*" class="hidden" >
-            <button class="self-end px-4 py-1 text-white bg-blue-500 rounded-md" onclick="document.getElementById('imageInput').click()">Browse</button>
-            <button class="px-4 py-1 text-white bg-blue-500 rounded-md justify-self-end" type="submit">Upload</button>
-      </form>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .parent {
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+grid-template-rows: repeat(7, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 2 / 1 / 7 / 4; font-size: 40px; text-align: center;}
+.div2 { grid-area: 2 / 7 / 8 / 9; }
+
+@media screen and (max-width: 1000px) {
+    .parent {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 3; font-size: 20px;  }
+.div2 { grid-area: 2 / 1 / 6 / 3; width: 60%; margin: auto; }
+}
+
+</style>
+<body>
+    <image src="../static/homepage/bg.jpg" class="mx-auto absolute top-0 left-0 -z-10 h-[100vh] w-[100vw] fixed"></image>
+    <div class="h-full p-4 parent">
+        <div class="text-white div1">Welcome To<br>Samsung Smart Things</div>
+        <div id="form" class="p-2 bg-white div2">
+            <image src="../static/homepage/logo.png" class="mx-auto w-28 mix-blend-multiply "></image>
+            <image src="../static/homepage/logo1.png" class="w-40 mx-auto mix-blend-multiply"></image>
+            <form  class="flex flex-col items-center justify-center h-3/5 ">
+                <input name="username" type="text" id="username" placeholder="Username" class="w-1/2 p-2 text-black placeholder-black bg-transparent border-b-2 border-black outline-none ">
+                <input name="name" type="text" id="nameInput" placeholder="Name" class="w-1/2 p-2 text-black placeholder-black bg-transparent border-b-2 border-black outline-none">
+                <input name="image" type="file" id="imageInput" accept="image/*" class="hidden" >
+                <button class="self-end px-4 py-1 text-white bg-blue-500 rounded-md" onclick="document.getElementById('imageInput').click()">Browse</button>
+                <button class="px-4 py-1 text-white bg-blue-500 rounded-md justify-self-end" type="submit">Upload</button>
+          </form>
+        </div>
     </div>
-    <canvas style="display: none;" class="webgl"></canvas>
+    
+    
+    <canvas style="display: none;" class="fixed top-0 left-0 outline-none webgl"></canvas>
 </body>
 
 </script>
 </html>
+
+

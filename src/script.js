@@ -1,5 +1,3 @@
-import './style.css'
-import './output.css'
 import * as THREE from 'three'
 import createAllWall from './wall.js'
 import createAllDoor from './door.js'
